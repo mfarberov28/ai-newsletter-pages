@@ -144,6 +144,12 @@
   footer a{color:var(--charcoal-soft);text-decoration:none;font-size:14px}
   footer a:hover{color:var(--green)}
 
+  /* ABOUT */
+  .about-grid{display:grid;grid-template-columns:420px 1fr;gap:64px;align-items:center}
+  .about-frame{position:relative}
+  .about-frame img{width:100%;border-radius:18px;display:block;box-shadow:0 30px 60px -28px rgba(38,56,44,.45)}
+  .about-frame::after{content:'';position:absolute;top:16px;left:16px;right:-16px;bottom:-16px;border:1px solid var(--gold);border-radius:18px;z-index:-1;opacity:.7}
+
   @media(max-width:900px){
     .wrap{padding:0 22px}
     .links a:not(.pill){display:none}
@@ -154,6 +160,9 @@
     .included{grid-template-columns:1fr;padding:40px 28px;gap:30px}
     .cta-band{padding:56px 26px}
     footer{flex-direction:column;align-items:flex-start}
+    .about-grid{grid-template-columns:1fr;gap:40px}
+    .about-frame{max-width:420px;margin:0 auto}
+    .about-frame::after{display:none}
   }
 </style>
 </head>
@@ -247,6 +256,21 @@
         <li><span class="tick"><svg width="10" height="10" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="#1c2a21" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></span>A strategy tailored to your life, not a template</li>
         <li><span class="tick"><svg width="10" height="10" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="#1c2a21" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Optional image and presence refinement</li>
       </ul>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="sec" id="about" style="padding-top:0">
+    <div class="about-grid">
+      <div class="about-frame reveal">
+        <img src="images/marina-portrait.jpg" alt="Marina Stepensky — dating coach and founder of MW Dating">
+      </div>
+      <div class="reveal">
+        <div class="sec-eyebrow">Meet Your Coach</div>
+        <h2>Marina <em>Stepensky.</em></h2>
+        <p class="sec-sub" style="max-width:560px">I work privately with accomplished men and women who are brilliant at building careers, companies, and full lives — and ready to bring that same intention to love. My clients don't need more dating advice. They need one trusted perspective that sees the pattern they can't see from inside it. That's what I do — warmly, directly, and in complete confidence.</p>
+        <p style="margin-top:26px"><a href="https://tally.so/r/QK8kYl" class="text-link">Start with the 2-minute Pattern Finder <em>→</em></a></p>
+      </div>
     </div>
   </section>
 
