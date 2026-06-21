@@ -108,6 +108,24 @@ nav.solid .links a:not(.pill){color:var(--charcoal)}
 /* ============ HERO ============ */
 .hero{position:relative;z-index:2;min-height:100svh;display:flex;flex-direction:column;justify-content:center;padding:120px 0 90px}
 .hero .wrap{width:100%}
+.hero-grid{display:grid;grid-template-columns:1.12fr .88fr;gap:56px;align-items:center}
+.hero-portrait{position:relative;justify-self:end}
+.hp-frame{position:relative;width:min(430px,40vw);aspect-ratio:4/5;border-radius:215px 215px 26px 26px;overflow:hidden;
+  border:1px solid rgba(188,154,95,.5);
+  box-shadow:0 50px 90px -34px rgba(0,0,0,.78), inset 0 0 0 1px rgba(242,238,231,.05);
+  animation:floaty 7.5s ease-in-out infinite}
+.hp-frame img{width:100%;height:100%;object-fit:cover;object-position:center 14%;display:block}
+.hp-frame .ph-fallback{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-family:'Fraunces',serif;font-size:120px;color:rgba(212,187,140,.5);background:linear-gradient(160deg,#2d4234,#16211a)}
+.hero-portrait::after{content:'';position:absolute;right:-20px;bottom:-20px;z-index:-1;
+  width:min(430px,40vw);aspect-ratio:4/5;border:1px solid rgba(188,154,95,.32);border-radius:215px 215px 26px 26px}
+.hp-tag{position:absolute;left:50%;bottom:-20px;transform:translateX(-50%);z-index:4;white-space:nowrap;
+  display:flex;align-items:center;gap:11px;padding:11px 22px;border-radius:100px;
+  background:rgba(18,26,20,.82);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);
+  border:1px solid rgba(188,154,95,.42);box-shadow:0 22px 46px -22px rgba(0,0,0,.85)}
+.hp-tag b{font-family:'Fraunces',serif;font-weight:500;font-size:15px;color:var(--cream)}
+.hp-tag span{font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold-soft)}
+@keyframes floaty{0%,100%{transform:translateY(0)}50%{transform:translateY(-13px)}}
+@media(prefers-reduced-motion:reduce){.hp-frame{animation:none}}
 .hero-eyebrow{display:inline-flex;align-items:center;gap:14px;font-size:11.5px;font-weight:600;letter-spacing:.34em;text-transform:uppercase;color:var(--gold-soft);margin-bottom:30px}
 .hero-eyebrow .rule{width:42px;height:1px;background:var(--gold)}
 .hero h1{font-family:'Fraunces',serif;font-weight:300;font-size:clamp(46px,7.4vw,108px);line-height:.98;letter-spacing:-.02em;color:var(--cream);max-width:13ch}
@@ -275,12 +293,16 @@ footer{position:relative;z-index:5;background:var(--ink);color:rgba(242,238,231,
   .about-photos{height:440px;max-width:440px;margin:0 auto}
   .about h2{text-align:center}.about .sec-eyebrow{display:inline-flex}
   .cta-band{padding:64px 26px}
+  .hero-grid{grid-template-columns:1fr;gap:54px;justify-items:start}
+  .hero-portrait{justify-self:center;margin-top:6px}
+  .hp-frame,.hero-portrait::after{width:min(330px,72vw)}
 }
 @media(max-width:560px){
   .method{grid-template-columns:1fr}
   .hero-meta{gap:22px}.hero-meta .sep{display:none}
   .sec{padding:90px 0}
   .foot-cols{gap:36px}
+  .hp-frame,.hero-portrait::after{width:min(280px,80vw)}
 }
 @media(prefers-reduced-motion:reduce){
   *{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.2s!important}
@@ -322,7 +344,8 @@ footer{position:relative;z-index:5;background:var(--ink);color:rgba(242,238,231,
 
 <!-- HERO -->
 <header class="hero" id="top">
-  <div class="wrap">
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
     <div class="hero-eyebrow reveal"><span class="rule"></span>Private Coaching · Miami &amp; Worldwide</div>
     <h1 class="reveal">You've built<br>everything.<br>Except <em>this.</em></h1>
     <p class="lede reveal">You don't have a confidence problem — <b>you have a pattern problem.</b> MW Consulting is private, bespoke coaching in the art of <b>intentional dating</b>, for accomplished people ready to approach their love life with the same intention they brought to everything else.</p>
@@ -337,6 +360,14 @@ footer{position:relative;z-index:5;background:var(--ink);color:rgba(242,238,231,
       <div><div class="n">100% private</div><div class="l">Discreet &amp; confidential</div></div>
       <div class="sep"></div>
       <div><div class="n">The 4-P Method</div><div class="l">A proven, repeatable framework</div></div>
+    </div>
+    </div>
+    <div class="hero-portrait reveal">
+      <div class="hp-frame">
+        <img src="images/marina-headshot.jpg" alt="Marina, founder of MW Consulting" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="ph-fallback" style="display:none">M</div>
+      </div>
+      <div class="hp-tag"><b>Marina</b><span>Founder &amp; Coach</span></div>
     </div>
   </div>
   <div class="scroll-cue reveal"><div class="mouse"><i></i></div>Scroll</div>
@@ -444,11 +475,11 @@ footer{position:relative;z-index:5;background:var(--ink);color:rgba(242,238,231,
       <div class="about">
         <div class="about-photos reveal">
           <div class="ph-frame ph-1">
-            <img src="images/marina-headshot.jpg" alt="Marina, founder of MW Consulting" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+            <img src="images/marina-2.jpg" alt="Marina, founder of MW Consulting, at work" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
             <div class="ph-fallback" style="display:none">M</div>
           </div>
           <div class="ph-frame ph-2">
-            <img src="images/marina-2.jpg" alt="Marina" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+            <img src="images/marina-headshot.jpg" alt="Marina" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
             <div class="ph-fallback" style="display:none">MW</div>
           </div>
           <div class="ph-badge">
@@ -463,7 +494,8 @@ footer{position:relative;z-index:5;background:var(--ink);color:rgba(242,238,231,
           <p>Friends came to me. Then friends of friends. Then strangers at midnight. After a decade of those conversations, this became the work — and the 4-P Method came out of watching the same patterns repeat across hundreds of them.</p>
           <p>I'm direct. I don't over-explain. I don't do scripts, I don't do hype, and I don't do therapy. The work either lands or it doesn't — and you'll know which by the end of the first session.</p>
           <div class="sig">
-            <span class="sig-fallback">Marina</span>
+            <img src="images/marina-signature.png" alt="Marina — signature" onerror="this.style.display='none';this.nextElementSibling.style.display='inline'">
+            <span class="sig-fallback" style="display:none">Marina</span>
             <span class="role">Founder &amp; Coach<br>MW Consulting</span>
           </div>
         </div>
@@ -474,6 +506,7 @@ footer{position:relative;z-index:5;background:var(--ink);color:rgba(242,238,231,
   <!-- TESTIMONIAL -->
   <section class="sec" id="stories">
     <div class="wrap">
+      <!-- TESTIMONIAL: replace the blockquote + .who below with a real, client-approved quote -->
       <div class="quote reveal">
         <span class="mark">"</span>
         <blockquote>It named something in <em>ninety seconds</em> that two years of dating apps never made clear. I changed how I show up — and for the first time, it actually <em>worked.</em></blockquote>
