@@ -245,8 +245,12 @@ nav.solid .links a:not(.pill){color:var(--charcoal)}
 .quote .mark{font-family:'Fraunces',serif;font-size:80px;color:var(--gold);line-height:0;height:42px;display:block}
 .quote blockquote{font-family:'Fraunces',serif;font-weight:300;font-size:clamp(25px,3.3vw,40px);line-height:1.38;color:var(--charcoal);letter-spacing:-.01em}
 .quote blockquote em{font-style:italic;color:var(--green)}
-.quote .who{margin-top:32px;font-size:14px;letter-spacing:.06em;color:var(--charcoal-soft)}
+.quote .who{font-size:14px;letter-spacing:.06em;color:var(--charcoal-soft)}
 .quote .who b{color:var(--charcoal);font-weight:600}
+.promise-eyebrow{display:inline-flex;margin-bottom:26px}
+.promise-sign{margin-top:34px;display:flex;flex-direction:column;align-items:center;gap:8px}
+.promise-sign img{height:64px;width:auto;opacity:.92}
+.promise-sign .sig-fallback{font-family:'Fraunces',serif;font-style:italic;font-size:32px;color:var(--gold)}
 
 /* FINAL CTA */
 .finale{position:relative;z-index:5;padding:0 0 120px;background:var(--cream)}
@@ -503,14 +507,17 @@ footer{position:relative;z-index:5;background:var(--ink);color:rgba(242,238,231,
     </div>
   </section>
 
-  <!-- TESTIMONIAL -->
+  <!-- THE PROMISE -->
   <section class="sec" id="stories">
     <div class="wrap">
-      <!-- TESTIMONIAL: replace the blockquote + .who below with a real, client-approved quote -->
       <div class="quote reveal">
-        <span class="mark">"</span>
-        <blockquote>It named something in <em>ninety seconds</em> that two years of dating apps never made clear. I changed how I show up — and for the first time, it actually <em>worked.</em></blockquote>
-        <div class="who"><b>A private client</b> &nbsp;·&nbsp; The Last First Date, 2026</div>
+        <div class="sec-eyebrow promise-eyebrow">The Promise</div>
+        <blockquote>By the end of our first session, you'll see the pattern that's quietly run your love life for years — and you'll know <em>exactly</em> what to do differently. No scripts. No hype. Just the clarity you've been <em>missing.</em></blockquote>
+        <div class="promise-sign">
+          <img src="images/marina-signature.png" alt="Marina — signature" onerror="this.style.display='none';this.nextElementSibling.style.display='inline'">
+          <span class="sig-fallback" style="display:none">Marina</span>
+          <div class="who"><b>Marina</b> &nbsp;·&nbsp; Founder, MW Consulting</div>
+        </div>
       </div>
     </div>
   </section>
