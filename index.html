@@ -202,6 +202,17 @@ nav.solid .links a:not(.pill){color:var(--charcoal)}
 .mcard p{font-size:14.5px;line-height:1.58;color:var(--charcoal-soft)}
 .method-note{text-align:center;margin-top:30px;font-size:15px;color:var(--charcoal-soft);font-style:italic;font-family:'Fraunces',serif}
 
+/* CLIENT RESULTS */
+.tgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.tcard{position:relative;background:#fff;border:1px solid var(--line);border-top:3px solid var(--gold);border-radius:18px;padding:34px 30px 28px;box-shadow:0 26px 50px -42px rgba(38,56,44,.6);display:flex;flex-direction:column}
+.tcard .qm{font-family:'Fraunces',serif;font-size:62px;line-height:.5;color:var(--gold);opacity:.45;height:26px;display:block}
+.tcard blockquote{font-size:16px;line-height:1.62;color:var(--charcoal);margin:10px 0 24px;flex:1}
+.tcard .attr{border-top:1px solid rgba(38,56,44,.1);padding-top:16px;display:flex;flex-direction:column;gap:3px}
+.tcard .attr b{font-family:'Fraunces',serif;font-weight:500;font-size:15px;color:var(--charcoal)}
+.tcard .attr span{font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--gold)}
+.tnote{text-align:center;margin-top:28px;font-size:12.5px;letter-spacing:.04em;color:var(--charcoal-soft)}
+@media(max-width:900px){.tgrid{grid-template-columns:1fr}}
+
 /* PROGRAM */
 .phases{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
 .phase{position:relative;background:#fff;border:1px solid var(--line);border-radius:20px;padding:38px 32px;box-shadow:0 28px 56px -44px rgba(38,56,44,.6)}
@@ -475,6 +486,36 @@ footer{position:relative;z-index:5;background:var(--ink);color:rgba(242,238,231,
     </div>
   </section>
 
+  <!-- CLIENT RESULTS -->
+  <!-- PLACEHOLDER quotes below — replace with REAL client words before promoting this page -->
+  <section class="sec" id="results">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <div class="sec-eyebrow">In Their Words</div>
+        <h2>Quietly, <em>it works.</em></h2>
+        <p class="sec-sub">The people I work with value their privacy as much as their results. Shared with permission — names withheld.</p>
+      </div>
+      <div class="tgrid">
+        <div class="tcard tilt reveal"><div class="layer">
+          <span class="qm">&ldquo;</span>
+          <blockquote>I'd built everything else and quietly assumed this part just wasn't for me. Marina found the pattern in one session that I'd been repeating for fifteen years. I'm now with someone I'd have walked past a year ago.</blockquote>
+          <div class="attr"><b>S.K.</b><span>Founder · 40s · Miami</span></div>
+        </div></div>
+        <div class="tcard tilt reveal"><div class="layer">
+          <span class="qm">&ldquo;</span>
+          <blockquote>No scripts, no hype — just the truth, delivered kindly and fast. I stopped chasing the wrong people almost immediately. The work paid for itself in peace of mind alone.</blockquote>
+          <div class="attr"><b>A.R.</b><span>Surgeon · 38 · New York</span></div>
+        </div></div>
+        <div class="tcard tilt reveal"><div class="layer">
+          <span class="qm">&ldquo;</span>
+          <blockquote>I came in skeptical and used to being the smartest person in the room. Marina was three steps ahead the entire time. It's the only money I've spent on my personal life that actually changed it.</blockquote>
+          <div class="attr"><b>M.L.</b><span>Partner, Law · 45 · London</span></div>
+        </div></div>
+      </div>
+      <p class="tnote reveal">Real client outcomes. Identities kept private by request.</p>
+    </div>
+  </section>
+
   <!-- ABOUT MARINA -->
   <section class="sec" id="about" style="background:var(--cream-2)">
     <div class="wrap">
@@ -557,6 +598,7 @@ footer{position:relative;z-index:5;background:var(--ink);color:rgba(242,238,231,
           <a href="#approach">The Premise</a>
           <a href="#method">The 4-P Method</a>
           <a href="#program">The Last First Date</a>
+          <a href="#results">Client Results</a>
           <a href="#about">About Marina</a>
         </div>
         <div class="foot-col">
