@@ -37,6 +37,20 @@
   "priceRange": "$$$"
 }
 </script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type": "Question", "name": "What does a dating consultant actually do — and how is this different from matchmaking?", "acceptedAnswer": {"@type": "Answer", "text": "A matchmaker finds you people. MW Consulting changes what happens when you meet them — working on the pattern that keeps producing the same ending with different people. Matchmaking treats the symptom; this treats the mechanism."}},
+    {"@type": "Question", "name": "How much does a dating consultant cost at MW Consulting?", "acceptedAnswer": {"@type": "Answer", "text": "The Clarity Session — 60 minutes one-on-one plus a written Partner Blueprint — is $497. The signature 90-day program, The Last First Date, is by application after that session."}},
+    {"@type": "Question", "name": "Is this therapy?", "acceptedAnswer": {"@type": "Answer", "text": "No. Therapy looks backward to heal; this work looks forward to build. For clinical concerns, MW Consulting refers clients to licensed therapists."}},
+    {"@type": "Question", "name": "Who is MW Consulting for?", "acceptedAnswer": {"@type": "Answer", "text": "Accomplished singles, roughly ages 32 to 70, who have built successful careers and lives but keep repeating the same dating pattern."}},
+    {"@type": "Question", "name": "Does Marina only work with clients in Miami?", "acceptedAnswer": {"@type": "Answer", "text": "MW Consulting is based in Miami and works worldwide over video."}},
+    {"@type": "Question", "name": "Where do I start?", "acceptedAnswer": {"@type": "Answer", "text": "Start with the free 2-minute Pattern Finder quiz at mwdating.com. You receive a personal written read on your answers, then decide whether to book the Clarity Session."}}
+  ]
+}
+</script>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -237,6 +251,14 @@ nav.solid .links a:not(.pill){color:var(--charcoal)}
 .tcard .attr b{font-family:'Fraunces',serif;font-weight:500;font-size:15px;color:var(--charcoal)}
 .tcard .attr span{font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--gold)}
 .tnote{text-align:center;margin-top:28px;font-size:12.5px;letter-spacing:.04em;color:var(--charcoal-soft)}
+/* FAQ */
+.faq-list{max-width:760px;margin:0 auto}
+.faq-item{border-bottom:1px solid var(--line);padding:6px 0}
+.faq-item summary{cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:18px;padding:20px 4px;font-family:'Fraunces',serif;font-size:19px;font-weight:500;color:var(--green)}
+.faq-item summary::-webkit-details-marker{display:none}
+.faq-item summary::after{content:'+';font-family:'Hanken Grotesk',sans-serif;font-size:22px;font-weight:400;color:var(--gold);flex:0 0 auto;transition:transform .25s ease}
+.faq-item[open] summary::after{transform:rotate(45deg)}
+.faq-item p{margin:0 4px 22px;max-width:680px;font-size:15.5px;line-height:1.75;color:var(--charcoal)}
 @media(max-width:900px){.tgrid{grid-template-columns:1fr}}
 
 /* PROGRAM */
@@ -512,33 +534,32 @@ footer{position:relative;z-index:5;background:var(--ink);color:rgba(242,238,231,
     </div>
   </section>
 
-  <!-- CLIENT RESULTS -->
-  <!-- PLACEHOLDER quotes below — replace with REAL client words before promoting this page -->
+  <!-- THE PATTERNS / HOW THE WORK LANDS -->
   <section class="sec" id="results">
     <div class="wrap">
       <div class="sec-head reveal">
-        <div class="sec-eyebrow">In Their Words</div>
+        <div class="sec-eyebrow">The Patterns</div>
         <h2>Quietly, <em>it works.</em></h2>
-        <p class="sec-sub">The people I work with value their privacy as much as their results. Shared with permission — names withheld.</p>
+        <p class="sec-sub">Every engagement is private — I don't publish client stories. But across hundreds of conversations, the same three patterns keep appearing. One of them is probably yours.</p>
       </div>
       <div class="tgrid">
         <div class="tcard tilt reveal"><div class="layer">
-          <span class="qm">&ldquo;</span>
-          <blockquote>I'd built everything else and quietly assumed this part just wasn't for me. Marina found the pattern in one session that I'd been repeating for fifteen years. I'm now with someone I'd have walked past a year ago.</blockquote>
-          <div class="attr"><b>S.K.</b><span>Founder · 40s · Miami</span></div>
+          <span class="qm">01</span>
+          <blockquote>You've built the career, the health, the circle — and quietly concluded this one area just isn't for you. It is. There's a pattern underneath, it has a mechanism, and it's usually visible within one session. Once you see it, you can't unsee it.</blockquote>
+          <div class="attr"><b>The Achiever's Blind Spot</b><span>Success everywhere but here</span></div>
         </div></div>
         <div class="tcard tilt reveal"><div class="layer">
-          <span class="qm">&ldquo;</span>
-          <blockquote>No scripts, no hype — just the truth, delivered kindly and fast. I stopped chasing the wrong people almost immediately. The work paid for itself in peace of mind alone.</blockquote>
-          <div class="attr"><b>A.R.</b><span>Surgeon · 38 · New York</span></div>
+          <span class="qm">02</span>
+          <blockquote>You keep choosing butterflies and calling it chemistry. Butterflies are often anxiety dressed up as romance. The shift is learning what calm feels like — and discovering it isn't boring. It's what you were actually looking for.</blockquote>
+          <div class="attr"><b>Chasing the Spark</b><span>Mistaking nerves for connection</span></div>
         </div></div>
         <div class="tcard tilt reveal"><div class="layer">
-          <span class="qm">&ldquo;</span>
-          <blockquote>I came in skeptical and used to being the smartest person in the room. Marina was three steps ahead the entire time. It's the only money I've spent on my personal life that actually changed it.</blockquote>
-          <div class="attr"><b>M.L.</b><span>Partner, Law · 45 · London</span></div>
+          <span class="qm">03</span>
+          <blockquote>You're torn between standards that filter everyone out and the fear of settling. There's a test for that — and once you apply it, you stop spending months on maybes. Clarity is faster than hope.</blockquote>
+          <div class="attr"><b>The Settling Fear</b><span>High standards, or a moving target?</span></div>
         </div></div>
       </div>
-      <p class="tnote reveal">Real client outcomes. Identities kept private by request.</p>
+      <p class="tnote reveal">Which one is yours? The 2-minute quiz will tell you.</p>
     </div>
   </section>
 
@@ -592,6 +613,42 @@ footer{position:relative;z-index:5;background:var(--ink);color:rgba(242,238,231,
     </div>
   </section>
 
+  <!-- FAQ -->
+  <section class="sec" id="faq" style="background:var(--cream-2)">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <div class="sec-eyebrow">Questions, Answered</div>
+        <h2>Before you <em>ask.</em></h2>
+      </div>
+      <div class="faq-list reveal">
+        <details class="faq-item">
+          <summary>What does a dating consultant actually do — and how is this different from matchmaking?</summary>
+          <p>A matchmaker finds you people. I change what happens when you meet them. MW Consulting works on the pattern — the thing that keeps producing the same ending with different people. Matchmaking treats the symptom; this treats the mechanism. Most clients come to me after matchmaking and the apps have both failed for the same reason: the inputs changed, the pattern didn't.</p>
+        </details>
+        <details class="faq-item">
+          <summary>How much does it cost?</summary>
+          <p>The Clarity Session — 60 minutes, one-on-one, plus your written Partner Blueprint — is $497. The signature 90-day program, The Last First Date, is by application after that session, and we'll discuss whether it's right for you there. No pressure, no funnel tricks: some people get what they need from the single session.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Is this therapy?</summary>
+          <p>No. Therapy looks backward to heal; this work looks forward to build. I don't diagnose, and I don't do therapy-speak. If clinical concerns come up, I'll say so plainly and point you to a licensed therapist — sometimes alongside this work, sometimes instead of it.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Who is this for?</summary>
+          <p>Accomplished singles, roughly 32 to 70 — people who have built real careers, real health, real friendships, and are still single without understanding why. If you've "tried everything" — the apps, the setups, the advice — and the result keeps repeating, you're exactly who this was built for.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Do you only work with people in Miami?</summary>
+          <p>I'm based in Miami and work worldwide. Sessions are over video, scheduled across time zones — a third of my conversations happen with people in other countries.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Where do I start?</summary>
+          <p>The 2-minute Pattern Finder quiz. You'll get a personal read on your answers — written for you, not a canned result — usually within minutes. From there, you decide if the Clarity Session is the next step.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
 </div><!-- /shell -->
 
 <!-- FINAL CTA -->
@@ -624,8 +681,9 @@ footer{position:relative;z-index:5;background:var(--ink);color:rgba(242,238,231,
           <a href="#approach">The Premise</a>
           <a href="#method">The 4-P Method</a>
           <a href="#program">The Last First Date</a>
-          <a href="#results">Client Results</a>
+          <a href="#results">The Patterns</a>
           <a href="#about">About Marina</a>
+          <a href="#faq">Questions, Answered</a>
         </div>
         <div class="foot-col">
           <h4>Begin</h4>
